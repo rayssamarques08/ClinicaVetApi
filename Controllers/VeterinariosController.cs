@@ -10,6 +10,7 @@ namespace ClinicaVetApi.Controllers
     [ApiController]
     public class VeterinariosController : ControllerBase
     {
+        private readonly AppDbContext _context;
         public VeterinariosController(AppDbContext context)
         {
             _context = context;
@@ -27,7 +28,7 @@ namespace ClinicaVetApi.Controllers
         public async
             Task<ActionResult> CadastrarVeterinario(Veterinario veterinario)
         {
-            _context.Pets.Add(veterinario);
+            _context.Veterinarios.Add(veterinario);
             await _context.SaveChangesAsync();
             return Ok("Veterinario Cadastrado com sucesso!!!");
 

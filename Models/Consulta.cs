@@ -7,13 +7,11 @@ namespace ClinicaVetApi.Models
         public int Id { get; set; }
         public DateTime DataConsulta { get; set; }
         public string Motivo { get; set; }
-        public int ProfessorId { get; set; }
-
         public int PetId { get; set; }
-        [JsonIgnore]
         public int VeterinarioId { get; set; }
         [JsonIgnore]
-
+        public Veterinario? Veterinario { get; set; }
+        public Pet? Pet { get; set; }
 
     }
 }

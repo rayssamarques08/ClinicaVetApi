@@ -29,7 +29,7 @@ namespace ClinicaVetApi.Controllers
         public async
             Task<ActionResult> CadastrarTutor(Tutor tutor)
         {
-            _context.Pets.Add(tutor);
+            _context.Tutores.Add(tutor);
             await _context.SaveChangesAsync();
             return Ok("Pet Cadastrado com sucesso!!!");
 
